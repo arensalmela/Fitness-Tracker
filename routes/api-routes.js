@@ -22,4 +22,32 @@ router.post("/api/workouts", (req, res) => {
     });
 });
 
+router.put("/api/workouts/:id", (req, res) => {
+  Workout.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: {
+        exercises: req.body,
+      },
+    },
+    { new: true },
+    (err, data) => {
+      if (err) {
+        res.status(500).json({ err: err });
+      }
+      res.json(data);
+    }
+  );
+});
+
+router.get("/api/workouts/range", (req, res) => {
+  Workout.find({}, (error, data) => {
+    if (error) {
+      res.status(500).json({ err: error });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 module.exports = router;
