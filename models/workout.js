@@ -19,36 +19,42 @@ const workoutSchema = new Schema(
         type: {
           type: String,
           trim: true,
-          required: "Please enter excerise",
+          required: "Please enter type",
         },
         weight: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
         sets: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
         reps: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
         weight: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
         duration: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
         distance: {
           type: Number,
           trim: true,
+          min: 1,
           required: "Please enter excerise",
         },
       },
