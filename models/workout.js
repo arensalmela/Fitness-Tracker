@@ -9,7 +9,7 @@ const workoutSchema = new Schema(
       default: () => new Date(),
     },
 
-    exercise: [
+    exercises: [
       {
         name: {
           type: String,
@@ -63,20 +63,20 @@ const workoutSchema = new Schema(
 
   //includes dynamically created properties
 
-  {
-    toJSON: {
-      virtuals: true,
-    },
-  }
+  // {
+  //   toJSON: {
+  //     virtuals: true,
+  //   },
+  // }
 );
 
 //isolating exercise object
 
-workoutSchema.virtual("totalDuration").get(function () {
-  return this.exercise.reduce((total, excerise) => {
-    return total + exercise.duration;
-  }, 0);
-});
+// workoutSchema.virtual("totalDuration").get(function () {
+//   return this.exercises.reduce((total, excerise) => {
+//     return total + exercises.duration;
+//   }, 0);
+// });
 
 const Workout = mongoose.model("Workout", workoutSchema);
 

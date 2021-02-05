@@ -15,14 +15,14 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 //Routing
 
 app.use(require("./routes/html-routes"));
 app.use(require("./routes/api-routes"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
 });
 
