@@ -31,35 +31,31 @@ const workoutSchema = new Schema(
           type: Number,
           trim: true,
           min: 1,
-          required: "Please enter excerise",
         },
         reps: {
           type: Number,
           trim: true,
           min: 1,
-          required: "Please enter excerise",
         },
         weight: {
           type: Number,
           trim: true,
           min: 1,
-          required: "Please enter excerise",
         },
         duration: {
           type: Number,
           trim: true,
           min: 1,
-          required: "Please enter excerise",
+          required: "Please enter duration",
         },
         distance: {
           type: Number,
           trim: true,
           min: 1,
-          required: "Please enter excerise",
         },
       },
     ],
-  },
+  }
 
   //includes dynamically created properties
 
