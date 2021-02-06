@@ -2,7 +2,7 @@
 
 ## This app is deployed on Heroku. https://fitnesstracker-ads.herokuapp.com/
 
-### Collaborated with https://github.com/ReindeerCode
+### Collaborated with https://github.com/ReindeerCode & https://github.com/shannonquinn91
 
 ## License
 
@@ -10,7 +10,7 @@
 
 ## Project Description
 
-Using a mongo database and Mongoose Schema to create a workout tracker. This application will help the consumer reach their fitness goals by tracking their workout progress.
+Use a mongo database and Mongoose Schema to create a workout tracker. This application will help the consumer reach their fitness goals by tracking their workout progress.
 
 ## Acceptance Criteria
 
@@ -22,4 +22,10 @@ Using a mongo database and Mongoose Schema to create a workout tracker. This app
 
 https://github.com/arensalmela
 
+## Github Repository
+
+https://github.com/arensalmela/Fitness-Tracker
+
 ## Screenshot
+
+![Screenshot of notes](assets/workout.png)
