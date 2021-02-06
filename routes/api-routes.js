@@ -5,6 +5,10 @@ const Workout = require("../models/workout");
 router.get("/api/workouts", (req, res) => {
   Workout.find()
     .then((dbWorkouts) => {
+      let totalDuration = dbWorkouts.exercises.reduce(function (prev, cur) {
+        return prev + cur.duration;
+      }, 0);
+      dbWorkouts.totalDuration = totalDuration
       res.json(dbWorkouts);
     })
     .catch((error) => {
@@ -12,7 +16,7 @@ router.get("/api/workouts", (req, res) => {
     });
 });
 
-router.post("/api/workouts", (req, res) => {
+router.post("/api/exercise", (req, res) => {
   Workout.create({})
     .then((dbWorkouts) => {
       res.json(dbWorkouts);
